@@ -32,7 +32,11 @@ Image 4. Filebeat Configuration File
 
 Once this was completed, a new index pattern was created inside the Wazuh dashboard to showcase where the alerts generated throughout this project will be stored.
 
-<img width="600" height="289" alt="image" src="https://github.com/user-attachments/assets/9b75598d-672d-4c04-9bc7-63aef118377d" />
+<img width="700" height="289" alt="image" src="https://github.com/user-attachments/assets/9b75598d-672d-4c04-9bc7-63aef118377d" />
+
+Image 5. Archives Index Pattern
+
+
 
 
 
