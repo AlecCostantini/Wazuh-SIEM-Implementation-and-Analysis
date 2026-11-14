@@ -22,7 +22,7 @@ Once the Wazuh Dashboard was up and running, the next thing was to enable archiv
 <img width="825" height="60" alt="image" src="https://github.com/user-attachments/assets/7fc21320-2ad9-41f7-879f-47800dd09767" />
 <img width="517" height="212" alt="image" src="https://github.com/user-attachments/assets/7c4b220f-e8f5-4810-bb7d-d84c7216d882" />
 
-Images 2. & 3. Ossec.conf directory and configurations
+Images 2. & 3. Ossec.conf Directory and Configurations
 
 Next part in enabling archives was to update the Wazuh filebeat configuration which essentially is used to securely send alerts from the Wazuh server to the indexer. Located in the etc/filebeat directory, the file accessed was filebeat.yml. The image below shows under filebeat modules and archives, by default was set to false and needed updates to true. The filebeat service also needed to be restarted with command SYSTEMCTL RESTART FILEBEAT.SERVICE.
 
@@ -30,6 +30,8 @@ Next part in enabling archives was to update the Wazuh filebeat configuration wh
 
 Image 4. Filebeat Configuration File
 
+Once this was completed, a new index pattern was created inside the Wazuh dashboard to showcase where the alerts generated throughout this project will be stored.
+<img width="746" height="289" alt="image" src="https://github.com/user-attachments/assets/9b75598d-672d-4c04-9bc7-63aef118377d" />
 
 
 
