@@ -26,7 +26,8 @@ Images 2. & 3. Ossec.conf directory and configurations
 
 Next part in enabling archives was to update the Wazuh filebeat configuration which essentially is used to securely send alerts from the Wazuh server to the indexer. Located in the etc/filebeat directory, the file accessed was filebeat.yml. The image below shows under filebeat modules and archives, by default was set to false and needed updates to true. The filebeat service also needed to be restarted with command SYSTEMCTL RESTART FILEBEAT.SERVICE.
 
-<img width="513" height="439" alt="image" src="https://github.com/user-attachments/assets/0b514ee3-f820-459d-b9d3-06a569103187" />
+<img width="413" height="339" alt="image" src="https://github.com/user-attachments/assets/0b514ee3-f820-459d-b9d3-06a569103187" />
+
 Image 4. Filebeat Configuration File
 
 
