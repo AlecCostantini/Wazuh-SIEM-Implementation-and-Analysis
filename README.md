@@ -21,6 +21,9 @@ Once the Wazuh Dashboard was up and running, the next thing was to enable archiv
 
 <img width="825" height="60" alt="image" src="https://github.com/user-attachments/assets/7fc21320-2ad9-41f7-879f-47800dd09767" />
 <img width="517" height="212" alt="image" src="https://github.com/user-attachments/assets/7c4b220f-e8f5-4810-bb7d-d84c7216d882" />
+Images 2. & 3. Ossec.conf directory and configurations
+
+
 
 
 
