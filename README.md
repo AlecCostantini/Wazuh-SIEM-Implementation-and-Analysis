@@ -14,7 +14,7 @@ Wazuh Agents
 First part of this lab was installing the Ubuntu Server within VMWare to be utilized as the centralized Wazuh Server. Once the server was installed, I got the Wazuh installation commands directly from their website. Once that was installed, I had the User and Password needed to access the Wazuh dashboard.
 
 <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/be502bfa-a180-4646-b1d0-e8a96e096bbd" />
-
+Image 1. Wazuh Dashboard Login
 
 
 
