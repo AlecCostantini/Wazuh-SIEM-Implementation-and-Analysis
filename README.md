@@ -42,7 +42,7 @@ Another Ubuntu server and Windows 10 virtual machine were installed as the endpo
 <img width="1313" height="86" alt="image" src="https://github.com/user-attachments/assets/329c9d5c-35ca-4558-b9e8-b5d6daa5ccd6" />
 <img width="2090" height="130" alt="image" src="https://github.com/user-attachments/assets/64fc6a3f-2821-4705-8072-f21c2de696b3" />
 Images 6, 7, & 8 Download/Install Commands and Connected Agents
-
+Continuing on
 
 
 
