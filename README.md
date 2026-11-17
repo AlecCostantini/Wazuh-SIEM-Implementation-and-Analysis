@@ -52,7 +52,7 @@ I needed to next figure out how to get Sysmon logging active. Utilizing open sou
 Images 9, 10, 11 Sysmon installation and generated log data
 
 # 3. Generating Telemetry
-
+The Next part of this project was to create and understand the telemetry generated from different logs. 
 
 
 
