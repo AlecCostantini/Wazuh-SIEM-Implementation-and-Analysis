@@ -40,6 +40,7 @@ Image 5. Archives Index Pattern
 Another Ubuntu server and Windows 10 virtual machine were installed as the endpoints and then needed to be deployed as new agents inside the Wazuh dashboard. With open source information I was able to go step by step in deploying the windows and Ubuntu machines. The key steps in this process was making sure the Wazuh server IP address was assigned so that the agents could communicate with the server and running the commands to download/install the agents. I did also utilize SSH to access Ubuntu and RDP for the windows machine.
 <img width="1382" height="64" alt="image" src="https://github.com/user-attachments/assets/84a6deff-d26e-4ba8-ba2e-57263f659f55" />
 <img width="1313" height="86" alt="image" src="https://github.com/user-attachments/assets/329c9d5c-35ca-4558-b9e8-b5d6daa5ccd6" />
+<img width="2090" height="130" alt="image" src="https://github.com/user-attachments/assets/64fc6a3f-2821-4705-8072-f21c2de696b3" />
 
 
 
