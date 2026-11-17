@@ -37,8 +37,7 @@ Once this was completed, a new index pattern was created inside the Wazuh dashbo
 Image 5. Archives Index Pattern
 
 # 2. Connecting Agents and Sysmon installation
-
-
+Another Ubuntu server and Windows 10 virtual machine were installed as the endpoints and then needed to be deployed as new agents inside the Wazuh dashboard. With open source information I was able to go step by step in deploying the windows and Ubuntu machines. The key steps in this process was making sure the Wazuh server IP address was assigned so that the agents could communicate with the server and maki
 
 
 
