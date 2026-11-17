@@ -46,6 +46,8 @@ Images 6, 7, & 8 Download/Install Commands and Connected Agents
 I needed to next figure out how to get Sysmon logging active. Utilizing open source material and videos, I went through the steps, first going to the official Sysmon website to be downloaded. A Sysmon configuration file was also needed. I did utilize a walkthrough tutorial for these steps making sure I could successfully get Sysmon up and running. First agent I did this on was the Windows machine and made sure to install it with the correct config file.
 
 <img width="470" height="185" alt="image" src="https://github.com/user-attachments/assets/da403764-880d-49e5-a1f5-762d07dee46d" />
+<img width="502" height="27" alt="image" src="https://github.com/user-attachments/assets/0b1f8c8f-3035-47a2-b1b6-df00ef8a04a6" />
+
 
 
 
