@@ -42,7 +42,10 @@ Another Ubuntu server and Windows 10 virtual machine were installed as the endpo
 <img width="1313" height="86" alt="image" src="https://github.com/user-attachments/assets/329c9d5c-35ca-4558-b9e8-b5d6daa5ccd6" />
 <img width="2090" height="130" alt="image" src="https://github.com/user-attachments/assets/64fc6a3f-2821-4705-8072-f21c2de696b3" />
 Images 6, 7, & 8 Download/Install Commands and Connected Agents
-Continuing on
+
+I needed to next figure out how to get Sysmon logging active. Utilizing open source material and videos, I went through the steps, first going to the official Sysmon website to be downloaded. A Sysmon configuration file was also needed. I did utilize a walkthrough tutorial for these steps making sure I could successfully get Sysmon up and running. First agent I did this on was the Windows machine and made sure to install it with the correct config file.
+
+<img width="470" height="185" alt="image" src="https://github.com/user-attachments/assets/da403764-880d-49e5-a1f5-762d07dee46d" />
 
 
 
