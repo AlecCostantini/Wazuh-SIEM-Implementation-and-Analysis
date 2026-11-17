@@ -47,6 +47,8 @@ I needed to next figure out how to get Sysmon logging active. Utilizing open sou
 
 <img width="470" height="185" alt="image" src="https://github.com/user-attachments/assets/da403764-880d-49e5-a1f5-762d07dee46d" />
 <img width="502" height="27" alt="image" src="https://github.com/user-attachments/assets/0b1f8c8f-3035-47a2-b1b6-df00ef8a04a6" />
+<img width="1220" height="44" alt="image" src="https://github.com/user-attachments/assets/bc1678ad-cfa1-470f-8572-7587abf8d1c7" />
+
 
 
 
