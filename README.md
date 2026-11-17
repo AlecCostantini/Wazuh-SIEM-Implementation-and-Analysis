@@ -36,6 +36,8 @@ Once this was completed, a new index pattern was created inside the Wazuh dashbo
 
 Image 5. Archives Index Pattern
 
+# 2. Connecting Agents and Sysmon installation
+
 
 
 
