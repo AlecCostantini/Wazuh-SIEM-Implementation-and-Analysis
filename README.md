@@ -49,7 +49,7 @@ I needed to next figure out how to get Sysmon logging active. Utilizing open sou
 <img width="502" height="27" alt="image" src="https://github.com/user-attachments/assets/0b1f8c8f-3035-47a2-b1b6-df00ef8a04a6" />
 <img width="1865" height="142" alt="image" src="https://github.com/user-attachments/assets/ded824c9-4f51-488a-a8f3-1c7bfdeb9e8a" />
 
-Images 9, 10, 11 Sysmon 
+Images 9, 10, 11 Sysmon installation and generated log data
 
 
 
