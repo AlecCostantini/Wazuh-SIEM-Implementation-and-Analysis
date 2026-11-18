@@ -60,7 +60,16 @@ The Next part of this project was to create and understand the telemetry generat
 <img width="545" height="51" alt="image" src="https://github.com/user-attachments/assets/3a2b7181-5b9e-4be4-bb7e-aaf36419d60d" />
 <img width="493" height="417" alt="image" src="https://github.com/user-attachments/assets/a21c7041-f5cc-4bfc-ade6-0527cf0555b4" />
 
-Images 12, 13, 14, 15, & 16 Windows event logs and process creation
+Images 12, 13, 14, 15, & 16 Windows Event Logs Showcasing User creation and Updated Privileges
+
+Next I pivoted over to the Ubuntu machine to showcase SSH user access logs and activity. From my host PC command prompt I SSH into the ubuntu machine, from there was able to find the corresponding log in Wazuh and found it in the auth.log file inside the var/log directory. Now that I had successful login attempts, wanted to then switch and have multiple failed SSH login attempts quickly after one another. Reviewing activity again I could see this in the auth.log file as well as in Wazuh. Something I found interesting where in Wazuh it showed the MITRE attack IDs, tactic and techniques based on this type of behavior, indicating password guessing and a potential brute force related attack. This is all documented below.
+<img width="712" height="59" alt="image" src="https://github.com/user-attachments/assets/aaf384bb-fdc1-49fc-b493-6cc33d742197" />
+<img width="902" height="36" alt="image" src="https://github.com/user-attachments/assets/a74ee466-48ef-49d3-abe6-9a803be385ea" />
+<img width="1028" height="176" alt="image" src="https://github.com/user-attachments/assets/8a80e982-725b-4d9c-99d7-0fd72d9d6ce9" />
+
+
+
+
 
 
 
