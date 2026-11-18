@@ -73,7 +73,7 @@ Images 17, 18, 19, 20
 Linux SSH Logs of Successful and Failed Login Attempts
 
 # File Integrity Monitoring
-
+The next main part of this lab I wanted to focus on was learning and demonstrating how File Integrity Monitoring (FIM) works within a SIEM environment. This is a process in cybersecurity that tracks, analyzes and validates any critical files within an organization that may have been tampered with our corrupted in some way. This is very valuable with the amount of important files every organization must keep secure. FIM settings could be found within the main Wazuh config file Ossec.conf, by default it was disabled. Also from reviewing these settings it showed some default directories that would be getting looked at in real time indicating if anything was changed, FIM would start working to see what happened. I looked at this in Notepad via Administrator privledges inside the windows machine, which is where I also created a new file to be analyzed. 
 
 
 
