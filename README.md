@@ -69,7 +69,8 @@ Next I pivoted over to the Ubuntu machine to showcase SSH user access logs and a
 <img width="1028" height="176" alt="image" src="https://github.com/user-attachments/assets/8a80e982-725b-4d9c-99d7-0fd72d9d6ce9" />
 <img width="495" height="107" alt="image" src="https://github.com/user-attachments/assets/dc70b1d7-23ce-4ae7-9933-de83e5800a4a" />
 
-Images 17, 18, 19, 20 
+Images 17, 18, 19, 20
+Linux SSH Logs of Successful and Failed Login Attempts
 
 
 
