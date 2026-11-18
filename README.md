@@ -52,11 +52,15 @@ I needed to next figure out how to get Sysmon logging active. Utilizing open sou
 Images 9, 10, 11 Sysmon installation and generated log data
 
 # 3. Generating Telemetry
-The Next part of this project was to create and understand the telemetry generated from different logs. Windows endpoint telemetry and analysis can show many valuable things during an investigation through different security event logs and Sysmon logs. I wanted to first demonstrate activity from enabling guest accounts and user creation. In the windows machine, I utilized the net user command to trigger events where the guest account was enabled, the password was updated and a new user was created. I went back into Wazuh and refreshed recent activity to find the generated logs. Reviewing the log activity, I filtered for the windows agent and 'NewUser' which helped in shortening the recent logs. A crucial piece of information I reviewed were the windows event IDs. The first one displayed as (data.win.system.eventID 4720) would indicate a new user was created, and (data.win.system.eventID 4722) indicated that a new user account was enabled. Taking it another step further I wanted to trigger activity from a user being added to a group
+The Next part of this project was to create and understand the telemetry generated from different logs. Windows endpoint telemetry and analysis can show many valuable things during an investigation through different security event logs and Sysmon logs. I wanted to first demonstrate activity from enabling guest accounts and user creation. In the windows machine, I utilized the net user command to trigger events where the guest account was enabled, the password was updated and a new user was created. I went back into Wazuh and refreshed recent activity to find the generated logs. Reviewing the log activity, I filtered for the windows agent and 'NewUser' which helped in shortening the recent logs. A crucial piece of information I reviewed were the windows event IDs. The first one displayed as (data.win.system.eventID 4720) would indicate a new user was created, and (data.win.system.eventID 4722) indicated that a new user account was enabled. Taking it another step further I wanted to trigger activity from a user being added to a group. I ran the command net localgroup Administrators NewUser /add. From there I refreshed Wazuh log activity and found all the info of the process creation including the parent command line and command line. This documentation is shown in the images below.
 
 <img width="555" height="254" alt="image" src="https://github.com/user-attachments/assets/6663ba72-66ed-4708-a289-8ee5757fdaad" />
 <img width="820" height="285" alt="image" src="https://github.com/user-attachments/assets/56a2a591-5ba7-4c29-ae6c-7a86643b5a0d" />
 <img width="590" height="382" alt="image" src="https://github.com/user-attachments/assets/ae0fbc41-80bc-46f5-b2d1-1c089b4c751a" />
+<img width="545" height="51" alt="image" src="https://github.com/user-attachments/assets/3a2b7181-5b9e-4be4-bb7e-aaf36419d60d" />
+<img width="493" height="417" alt="image" src="https://github.com/user-attachments/assets/a21c7041-f5cc-4bfc-ade6-0527cf0555b4" />
+
+
 
 
 
