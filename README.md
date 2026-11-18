@@ -49,7 +49,7 @@ I needed to next figure out how to get Sysmon logging active. Utilizing open sou
 <img width="502" height="27" alt="image" src="https://github.com/user-attachments/assets/0b1f8c8f-3035-47a2-b1b6-df00ef8a04a6" />
 <img width="1865" height="142" alt="image" src="https://github.com/user-attachments/assets/ded824c9-4f51-488a-a8f3-1c7bfdeb9e8a" />
 
-Images 9, 10, 11 Sysmon installation and generated log data
+Images 9, 10, & 11 Sysmon installation and generated log data
 
 # 3. Generating Telemetry
 The Next part of this project was to create and understand the telemetry generated from different logs. Windows endpoint telemetry and analysis can show many valuable things during an investigation through different security event logs and Sysmon logs. I wanted to first demonstrate activity from enabling guest accounts and user creation. In the windows machine, I utilized the net user command to trigger events where the guest account was enabled, the password was updated and a new user was created. I went back into Wazuh and refreshed recent activity to find the generated logs. Reviewing the log activity, I filtered for the windows agent and 'NewUser' which helped in shortening the recent logs. A crucial piece of information I reviewed were the windows event IDs. The first one displayed as (data.win.system.eventID 4720) would indicate a new user was created, and (data.win.system.eventID 4722) indicated that a new user account was enabled. Taking it another step further I wanted to trigger activity from a user being added to a group. I ran the command net localgroup Administrators NewUser /add. From there I refreshed Wazuh log activity and found all the info of the process creation including the parent command line and command line. This documentation is shown in the images below.
@@ -60,7 +60,7 @@ The Next part of this project was to create and understand the telemetry generat
 <img width="545" height="51" alt="image" src="https://github.com/user-attachments/assets/3a2b7181-5b9e-4be4-bb7e-aaf36419d60d" />
 <img width="493" height="417" alt="image" src="https://github.com/user-attachments/assets/a21c7041-f5cc-4bfc-ade6-0527cf0555b4" />
 
-
+Images 12, 13, 14, 15, & 16 Windows event logs and process creation
 
 
 
