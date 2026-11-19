@@ -76,7 +76,7 @@ Linux SSH Logs of Successful and Failed Login Attempts
 The next main part of this lab I wanted to focus on was learning and demonstrating how File Integrity Monitoring (FIM) works within a SIEM environment. This is a process in cybersecurity that tracks, analyzes and validates any critical files within an organization that may have been tampered with our corrupted in some way. This is very valuable with the amount of important files every organization must keep secure. Also from reviewing these settings it showed some default directories that would be getting looked at in real time indicating if anything was changed, FIM would start working to see what happened. I looked at this in Notepad via Administrator privileges inside the windows machine, which is where I also created a new file and directory to be analyzed. A new directory was created called 'Classified' and inside was a created text file called 'SensitiveData'. FIM settings could be found within the main Wazuh config file Ossec.conf, inside there were some specific FIM settings to take note of. It showed the frequency that syscheck is executed being every 12 hours, default files to be monitored and the real time monitoring. So that FIM would also start monitoring in real time for the new directory that I just created, I needed to added this entry in the settings. This is shown in the image below.
 
 <img width="260" height="80" alt="image" src="https://github.com/user-attachments/assets/0dbf5933-a1d6-4c74-9ef3-05c3d0631989" />
-<img width="955" height="478" alt="image" src="https://github.com/user-attachments/assets/7dda9e9f-6bba-45da-81fb-b61e6f082d66" />
+<img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/7dda9e9f-6bba-45da-81fb-b61e6f082d66" />
 
 
 
