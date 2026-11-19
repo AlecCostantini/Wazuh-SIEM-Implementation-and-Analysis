@@ -69,14 +69,23 @@ Next I pivoted over to the Ubuntu machine to showcase SSH user access logs and a
 <img width="1028" height="176" alt="image" src="https://github.com/user-attachments/assets/8a80e982-725b-4d9c-99d7-0fd72d9d6ce9" />
 <img width="495" height="107" alt="image" src="https://github.com/user-attachments/assets/dc70b1d7-23ce-4ae7-9933-de83e5800a4a" />
 
-Images 17, 18, 19, 20
+Images 17, 18, 19, & 20
 Linux SSH Logs of Successful and Failed Login Attempts
 
 # File Integrity Monitoring
-The next main part of this lab I wanted to focus on was learning and demonstrating how File Integrity Monitoring (FIM) works within a SIEM environment. This is a process in cybersecurity that tracks, analyzes and validates any critical files within an organization that may have been tampered with our corrupted in some way. This is very valuable with the amount of important files every organization must keep secure. Also from reviewing these settings it showed some default directories that would be getting looked at in real time indicating if anything was changed, FIM would start working to see what happened. I looked at this in Notepad via Administrator privileges inside the windows machine, which is where I also created a new file and directory to be analyzed. A new directory was created called 'Classified' and inside was a created text file called 'SensitiveData'. FIM settings could be found within the main Wazuh config file Ossec.conf, inside there were some specific FIM settings to take note of. It showed the frequency that syscheck is executed being every 12 hours, default files to be monitored and the real time monitoring. So that FIM would also start monitoring in real time for the new directory that I just created, I needed to added this entry in the settings. This is shown in the image below.
+The next main part of this lab I wanted to focus on was learning and demonstrating how File Integrity Monitoring (FIM) works within a SIEM environment. This is a process in cybersecurity that tracks, analyzes and validates any critical files within an organization that may have been tampered with our corrupted in some way. This is very valuable with the amount of important files every organization must keep secure. Also from reviewing these settings it showed some default directories that would be getting looked at in real time indicating if anything was changed, FIM would start working to see what happened. I looked at this in Notepad via Administrator privileges inside the windows machine, which is where I also created a new file and directory to be analyzed. A new directory was created called 'Classified' and inside was a created text file called 'SensitiveData'. FIM settings could be found within the main Wazuh config file Ossec.conf, inside there were some specific FIM settings to take note of. It showed the frequency that syscheck is executed being every 12 hours, default files to be monitored and the real time monitoring. So that FIM would also start monitoring in real time for the new directory that I just created, I needed to added this entry in the settings. This is shown in the image below. Also important that these changes were saved in the Ossec.conf file and the Wazuh service needed to be restarted due to these changes.
 
 <img width="260" height="80" alt="image" src="https://github.com/user-attachments/assets/0dbf5933-a1d6-4c74-9ef3-05c3d0631989" />
 <img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/7dda9e9f-6bba-45da-81fb-b61e6f082d66" />
+
+Images 21 & 22 Directory Creation and Real Time Monitoring
+
+Now that these settings were updated, I needed to test out making changes to the file in hopes an alert would be triggered inside Wazuh. Inside the text file, I added some words reading "This is very sensitive information." After this for further proof of concept that FIM was working, I deleted the file. Back in Wazuh, I chose the Windows agent and the FIM tab. After refreshing inside events, I could see both both alerts triggered from altering the file and then deleting it. I found it interesting as well for the rule description stating that the file integrity checksum changed, therefore it would need to be uncovered if this file change was meant to happen or rather a legit threat where it was falsely tampered with in real scenario.
+
+<img width="1070" height="97" alt="image" src="https://github.com/user-attachments/assets/f1b74bb8-b7d5-49b4-a5fe-f7863924bdf8" />
+
+Image 23 FIM Alerts from Windows Agent
+
 
 
 
