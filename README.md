@@ -86,7 +86,7 @@ Now that these settings were updated, I needed to test out making changes to the
 
 Image 23 FIM Alerts from Windows Agent
 
-
+# Implementing Active Response
 
 
 
