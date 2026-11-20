@@ -99,6 +99,13 @@ From here, I then wanted to make a custom rule that triggers from repeated faile
 
 Image 24 SSH Failed Logins Custom Rule
 
+I went ahead and attempted multiple failed logins again on the windows machine into the Ubuntu server, after permission was denied on the third attempt, I went back into Wazuh to see the custom rule triggered as shown below. Filtering by the rule descriptions was easier to confirm and show proof of concept.
+
+<img width="708" height="43" alt="image" src="https://github.com/user-attachments/assets/bec12b62-66ad-47fb-9f75-842e5bdba770" />
+Image 25 Custom Rule Triggered Alert
+
+
+
 
 
 
