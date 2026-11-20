@@ -96,7 +96,9 @@ Image 23 Failed SSH Login Attempts
 From here, I then wanted to make a custom rule that triggers from repeated failed login attempts from the same IP address. Inside Wazuh I found the Rules tab, went into custom rules then into the local_rules.xml file, this where a new custom rule could be added. I did utilize open source and AI to help me in creating a good custom rule for this scenario which is shown below. This rule would trigger if there are at least three failed login attempts within two minutes. Also found it informative that the rule shows the MITRE Technique as well with what the rule is intended to prevent.
 
 <img width="774" height="205" alt="image" src="https://github.com/user-attachments/assets/88e26072-6df0-4572-a879-df923d6446ae" />
+
 Image 24 SSH Failed Logins Custom Rule
+
 
 
 
