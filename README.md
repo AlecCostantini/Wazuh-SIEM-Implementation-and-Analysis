@@ -88,7 +88,7 @@ Image 23 FIM Alerts from Windows Agent
 
 # Implementing Active Response
 
-The final part of this initial Wazuh lab was to create a custom rule that assists with active response against SSH brute force. For this demonstration I wanted to attempt and see what can be done from repeated failed SSH login attempts against the Ubuntu server with the goal being that Wazuh will automatically block the source. To begin this, I purposely failed trying to login with SSH on the Windows machine into the Ubuntu server to see how Wazuh logged this. I was able to see the recent alerts triggered from this activity indicating the multiple failed login attempts and failed authentication as shown below. 
+The final part of this initial Wazuh lab was to create a custom rule that assists with active response against SSH brute force simulated attacks. For this demonstration I wanted to attempt and see what can be done from repeated failed SSH login attempts against the Ubuntu server with the goal being that Wazuh will automatically block the source. To begin this, I purposely failed trying to login with SSH on the Windows machine into the Ubuntu server to see how Wazuh logged this. I was able to see the recent alerts triggered from this activity indicating the multiple failed login attempts and failed authentication as shown below. 
 
 <img width="605" height="109" alt="image" src="https://github.com/user-attachments/assets/8b591dff-1828-4e01-9b5c-6c86fc70e3ce" />
 Image 23 Failed SSH Login Attempts
@@ -102,11 +102,21 @@ Image 24 SSH Failed Logins Custom Rule
 I went ahead and attempted multiple failed logins again on the windows machine into the Ubuntu server, after permission was denied on the third attempt, I went back into Wazuh to see the custom rule triggered as shown below. Filtering by the rule descriptions was easier to confirm and show proof of concept.
 
 <img width="708" height="43" alt="image" src="https://github.com/user-attachments/assets/bec12b62-66ad-47fb-9f75-842e5bdba770" />
+
 Image 25 Custom Rule Triggered Alert
 
+Even with this custom rule made, I still next needed to find and configure active response to allow Wazuh to perform some automated actions. Active response settings were also located in the same main config file ossec.conf, full directory location /var/ossec/etc/ossec.conf. In finding this I needed to research how exactly to change the active response settings. Using Youtube and The Wazuh documentation website was very helpful. I found more information on active response scripts and what they do. The one used was firewall-drop, meant to add an IP address to the deny list. Back inside the ossec.conf file, I updated active response settings as shown below.
 
+<img width="289" height="116" alt="image" src="https://github.com/user-attachments/assets/81b259a9-f0ae-40cb-b209-7ee9cd8cc628" />
 
+Image 26 Active Response Configurations
 
+These settings mean several things, first off that active response disabled being set to no indicates it is active, it was instructed to run the firewall-drop script command, it will run on the local agent that triggers the alert and has the rules ID attached to the custom rule. Now to showcase proof of concept for the active response, I first wanted to see if there was connectivity currently between the windows machine and Ubuntu server by pinging its IP address 192.168.146.129 and using -t command so that the pings would continue. From another PowerShell window, I intentionally failed to SSH into the Ubuntu server again in hopes that this connection would be suspended, and the request did in fact time out. Going back into Wazuh and refreshing the alerts I could also now see the active response working in real time which in turn denied the IP address and ended the connection. 
+
+<img width="524" height="99" alt="image" src="https://github.com/user-attachments/assets/75e50bb0-0c04-495e-9802-f7fa4e3ce11e" />
+<img width="681" height="77" alt="image" src="https://github.com/user-attachments/assets/5291214a-e453-4a91-8de3-a87437e0caf1" />
+
+Images 27 & 28 Pinged Ubuntu Server and Triggered Active Response. 
 
 
 
